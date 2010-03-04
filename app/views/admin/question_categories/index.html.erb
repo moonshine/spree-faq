@@ -25,7 +25,7 @@
   <tr> 
     <td><%= h category.name %></td>
     <td><%= category.questions.count %></td>
-    <td><%= category.roles.collect { |r| r.name }.join(', ') %></td>
+    <td><%= category.roles.sort_by { |r| r.id }.collect { |r| r.name }.join(', ') %></td>
     <td class="actions">
       <%= link_to_edit category.id %>&nbsp;
       <%= link_to_delete category.id %>
