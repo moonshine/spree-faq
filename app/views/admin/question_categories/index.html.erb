@@ -17,6 +17,7 @@
   <thead>
     <th><%= t("category") %></td>
     <th><%= t("questions") %></td>
+    <th><%= t("roles") %></td>
     <th>&nbsp;</th>
   </tr>
   <thead>
@@ -24,6 +25,7 @@
   <tr> 
     <td><%= h category.name %></td>
     <td><%= category.questions.count %></td>
+    <td><%= category.roles.collect { |r| r.name }.join(', ') %></td>
     <td class="actions">
       <%= link_to_edit category.id %>&nbsp;
       <%= link_to_delete category.id %>

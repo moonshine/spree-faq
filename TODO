@@ -1,0 +1,1 @@
+* Check to make sure values from question_categories_roles are deleted when question category or role is deleted.

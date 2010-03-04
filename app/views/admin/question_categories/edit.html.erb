@@ -30,6 +30,11 @@
           <%= f.error_message_on :name %>
       <% end %>
 
+      <%= f.label :roles, t("roles") %>
+      <% Role.all.each do |role| %><br />
+        <%= check_box_tag "question_category[role_ids][]", role.id, @question_category.roles.include?(role) %> <%= role.name %><br />
+      <% end %>
+
       <div id="questions">
         <h2>Questions</h2>
         <%= link_to_with_icon 'add', t('add_question'), '#', :id => 'new_question_link' %>
