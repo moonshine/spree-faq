@@ -33,6 +33,9 @@ There are sample FAQs loaded as part of the rake db:bootstrap task.
 
 See the sample data in db/sample.
 
-Additional FAQ work by &copy 2010 [Spinlock Solutions][1]
+Role Assignment
+=============
+
+Additional FAQ work by &copy; 2010 [Spinlock Solutions][1]
 
 [1]: http://www.spinlocksolutions.com/
