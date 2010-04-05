@@ -1,11 +1,10 @@
 class Admin::QuestionCategoriesController < Admin::BaseController
   helper 'spree/base'
   resource_controller
-  before_filter :set_roles, :only => [ :create, :update ]
+  before_filter :set_roles, :only => :update
 
   def set_roles
-    logger.warn "steph setting roles #{params.inspect}"
-    @question_category.role_ids = nil unless params[:question_category].key? :role_ids
+    object.role_ids = [] unless params[:question_category].key? :role_ids
   end
 
   new_action.response do |format|
