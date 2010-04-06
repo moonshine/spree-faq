@@ -16,4 +16,6 @@ class Admin::QuestionCategoriesController < Admin::BaseController
   create.response do |format|
     format.html { redirect_to edit_admin_question_category_path(@question_category) }
   end
+
+  destroy.success.wants.js { render_js_for_destroy }
 end
